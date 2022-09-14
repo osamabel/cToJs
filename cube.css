@@ -1,0 +1,27 @@
+.flexAlignJustify
+{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.flexJustifyCenter
+{
+	display: flex;
+	justify-content: center;
+}
+.flexColumn
+{
+	flex-direction: column;
+}
+.robotoMono
+{
+	font-family: 'Roboto Mono', monospace;
+}
+.redius10
+{
+	border-radius: 10px;
+}
+.padding1
+{
+	padding: 1rem;
+}

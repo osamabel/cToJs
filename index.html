@@ -7,29 +7,79 @@
 	<link rel="stylesheet" href="style.css">
 	<title>Push swap</title>
 </head>
-<body>
+<body class="flexJustifyCenter robotoMono">
 	<main>
-		<section id="generator" class="Genetator">
+		<section class="genetator container flexColumn redius10 flexAlignJustify padding1">
 			<div class="title">
 				<h3>Generator</h3>
 			</div>
-			<div class="generator_action">
-				<div class="manual_generator">
+			<div class="insider flexAlignJustify">
+				<div class="manual_generator flexAlignJustify redius10 padding1">
 					<div>
 						<input id="start" type="number" placeholder="Start">
 						<input id="end" type="number" placeholder="End">
 					</div>
 					<button class="btn btn_gen_manual">Generate</button>
 				</div>
-				<div class="auto_generator">
-					<input type="number" class="much" placeholder="How much Number">
+				<div class="auto_generator flexAlignJustify redius10 padding1">
+					<input id="howMany" type="number" class="howMany" placeholder="How many">
 					<button class="btn btn_gen_auto">Generate</button>
 				</div>
 			</div>
 		</section>
-		<div id="display"></div>
+
+		<section class="suffled container flexColumn redius10 flexAlignJustify padding1">
+			<div class="title">
+				<h3>Shuffled Numbers</h3>
+			</div>
+				<div class="displayer redius10 padding1">
+					<ul id="displayer" class="flexJustifyCenter">
+						<li>11</li>
+						<li>12</li>
+						<li>13</li>
+						<li>14</li>
+						<li>15</li>
+						<li>0116</li>
+						<li>17</li>
+						<li>18</li>
+						<li>19</li>
+						<li>-11011</li>
+						<li>12</li>
+						<li>13</li>
+						<li>14</li>
+						<li>15</li>
+						<li>16</li>
+						<li>17</li>
+						<li>1118</li>
+						<li>19</li>
+						<li>11</li>
+						<li>12</li>
+						<li>13</li>
+						<li>14</li>
+						<li>15</li>
+						<li>16</li>
+						<li>17</li>
+						<li>18</li>
+						<li>19</li>
+						<li>11</li>
+						<li>12</li>
+						<li>13</li>
+						<li>14</li>
+						<li>15</li>
+						<li>16</li>
+						<li>17</li>
+						<li>18</li>
+						<li>19</li>
+						<li>11</li>
+						<li>12</li>
+						<li>16</li>
+						<li>17</li>
+						<li>18</li>
+						<li>19</li>
+					</ul>
+				</div>
+		</section>
 	</main>
-	<!-- <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 	<script src="main.js"></script>
 </body>
 </html>
