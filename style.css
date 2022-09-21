@@ -72,6 +72,26 @@ main{
 {
 	margin-top: 2rem;
 }
+.displayer ul
+{
+	justify-content: left;
+}
+.displayer ul li
+{
+	animation-name: showing;
+	animation-duration: 500ms;
+}
+@keyframes showing
+{
+	0% {
+		transform: translateX(70px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0px);
+		opacity: 1;
+	}
+}
 .displayer li
 {
 	padding: .5rem;
@@ -80,4 +100,80 @@ main{
 	background-color: var(--darker);
 	color: var(--light);
 	margin: .4rem;
+}
+
+.simulator
+{
+	display: flex;
+	justify-content: space-between;
+	gap: .5rem;
+}
+
+.simulation
+{
+	border: 1px solid;
+	width: 80%;
+	background-color: var(--lighter);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.stacks
+{
+	border: 1px solid red;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	gap: 1rem;
+}
+.stacka,.stackb
+{
+	border: 1px solid green;
+	width: 50%;
+	background-color: var(--darker);
+	text-align: center;
+}
+.stck
+{
+	transform: translateY(-20px);
+	font-size: .7rem;
+}
+.instractions
+{
+	border: 1px solid red;
+	width: 100px;
+}
+.instractions ul
+{
+	border: 1px solid rebeccapurple;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.instractions ul li
+{
+	width: 100%;
+	border: 1px solid rebeccapurple;
+	text-align: center;
+	padding: 1rem;
+	border-radius: 10px;
+	background-color: var(--lighter);
+	font-weight: 900;
+	font-size: 1rem;
+	color: var(--dark);
+	font-style: italic;
+}
+.controler
+{
+	border: 1px solid red;
+	display: flex;
+	gap: .5rem;
+}
+.controler button
+{
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	font-size: 1rem;
 }

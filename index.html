@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/4c426bc71c.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="style.css">
 	<title>Push swap</title>
 </head>
@@ -28,58 +29,51 @@
 			</div>
 		</section>
 
-		<section class="suffled container flexColumn redius10 flexAlignJustify padding1">
+		<section class="suffled container flexColumn redius10 flexAlignJustify padding1 hide">
 			<div class="title">
 				<h3>Shuffled Numbers</h3>
 			</div>
-				<div class="displayer redius10 padding1">
-					<ul id="displayer" class="flexJustifyCenter">
-						<li>11</li>
-						<li>12</li>
-						<li>13</li>
-						<li>14</li>
-						<li>15</li>
-						<li>0116</li>
-						<li>17</li>
-						<li>18</li>
-						<li>19</li>
-						<li>-11011</li>
-						<li>12</li>
-						<li>13</li>
-						<li>14</li>
-						<li>15</li>
-						<li>16</li>
-						<li>17</li>
-						<li>1118</li>
-						<li>19</li>
-						<li>11</li>
-						<li>12</li>
-						<li>13</li>
-						<li>14</li>
-						<li>15</li>
-						<li>16</li>
-						<li>17</li>
-						<li>18</li>
-						<li>19</li>
-						<li>11</li>
-						<li>12</li>
-						<li>13</li>
-						<li>14</li>
-						<li>15</li>
-						<li>16</li>
-						<li>17</li>
-						<li>18</li>
-						<li>19</li>
-						<li>11</li>
-						<li>12</li>
-						<li>16</li>
-						<li>17</li>
-						<li>18</li>
-						<li>19</li>
-					</ul>
+			<div class="displayer redius10 padding1">
+				<ul id="displayer" class="flexJustifyCenter"></ul>
+			</div>
+		</section>
+		<section class="simulator container redius10 padding1">
+			<div class="simulation redius10">
+				<div class="title">
+					<h3>Simulations</h3>
 				</div>
+				<div class="stacks padding1">
+					<div class="stacka redius10">
+						<div class="title stck">
+							<h3>Stack A</h3>
+						</div>46456
+					</div>
+					<div class="stackb redius10">
+						<div class="title stck">
+							<h3>Stack B</h3>
+						</div>98798
+					</div>
+				</div>
+			</div>
+			<div class="instractions">
+				<ul class="flexColumn">
+					<li>RA</li>
+					<li>RA</li>
+					<li>SA</li>
+					<li>SB</li>
+				</ul>
+			</div>
+			<div class="controler flexColumn redius10">
+				<button class="btn"><i class="fa-solid fa-forward-fast"></i></button>
+				<button class="btn"><i class="fa-solid fa-backward-fast"></i></button>
+				<button class="btn"><i class="fa-solid fa-play"></i></button>
+				<button class="btn"><i class="fa-solid fa-pause"></i></button>
+				<button class="btn"><i class="fa-solid fa-forward-step"></i></button>
+				<button class="btn"><i class="fa-solid fa-backward-step"></i></button>
+			</div>
 		</section>
 	</main>
 	<script src="main.js"></script>
+	<script src="swapAlgo.js"></script>
 </body>
 </html>

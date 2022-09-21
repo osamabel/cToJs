@@ -2,17 +2,19 @@
 /****************************************************** [ global ] ********** */
 let range;
 let length;
+let shuffled;
 
 /**************************************************************************** */
 /****************************************************** [ shuffle ] ********** */
 function shuffle(range) {
+	let n = length;
 	let result = [];
-	let n = range.length;
 	let i;
 	while (n) {
 		i = Math.floor(Math.random() * range.length);
 		if (i in range) {
 			result.push(range[i]);
+			A.push(range[i]);
 			delete range[i];
 			n--;
 		}
@@ -21,18 +23,6 @@ function shuffle(range) {
 }
 /**************************************************************************** */
 
-/**************************************************************************** */
-/**************************************************** [ Generator ] ********** */
-function generator(start, end)
-{
-	length = end - start;
-	range = Array(length);
-	for (let i = 0; i <= length; i++)
-		range[i] = start++;
-	console.log(range);
-	let shuffled = shuffle(range);
-	console.log(shuffled);
-}
 /**************************************************************************** */
 /******************************************* [ Manual Generation ] ********** */
 let startInput = document.getElementById("start");
@@ -47,17 +37,25 @@ function m_gen()
 		let end = Number(endInput.value);
 		if (start < end)
 		{
-			generator(start, end);
+			length = end - start;
+			range = Array(length);
+			shuffled = Array(length);
+			for (let i = 0; i <= length; i++)
+				range[i] = start++;
+			shuffled = shuffle(range);
 			startInput.value = "";
 			endInput.value = "";
+			minIndex = A.list.indexOf(Math.min(...A.list));
+			display();
+			transferMinToButtom();
 		}
 		else if (start == end)
-			alert("( -_- ), You Are Crazy!!");
+		alert("( -_- ), You Are Crazy!!");
 		else
-			alert("\"start\" < \"end\", Please use your brain !!");
+		alert("\"start\" < \"end\", Please use your brain !!");
 	}
 	else
-		alert("\"start\" or \"end\" Missing");
+	alert("\"start\" or \"end\" Missing");
 }
 /**************************************************************************** */
 
@@ -70,19 +68,46 @@ function a_gen()
 {
 	if(Number(howMany.value) > 0)
 	{
-		let start = Math.floor(-Number(howMany.value)/2);
-		let end = Math.floor(+Number(howMany.value)/2);
-		console.log(start);
-		console.log(end);
-		generator(start, end)
+		let n = Number(howMany.value);
+		length = n;
+		let i = 0;
+		let rund = [-100000, -10000, -1000, -100, -10, 0, 10, 100, 1000, 10000, 100000];
+		shuffled = Array(length);
+		while (n) {
+			let holder = Math.floor(Math.random() * rund[Math.floor(Math.random() * 10)]);
+			if (!shuffled.includes(holder))
+			{
+				shuffled[i] = holder
+				A.push(shuffled[i++]);
+				n--;
+			}
+		}
 		howMany.value = "";
+		minIndex = A.list.indexOf(Math.min(...A.list));
+		display();
+		transferMinToButtom();
 	}
 	else
 		alert("Sorry, But You Are Not Reasonable At All!");
-}
+	}
 /**************************************************************************** */
 
 /**************************************************************************** */
 /********************************************* [ Display Numbers ] ********** */
-
+function display()
+{
+	let displayerContainer = document.querySelector(".suffled");
+	let displayer = document.getElementById("displayer");
+	let elm;
+	displayerContainer.classList.remove("hide");
+	let i = 0;
+	let interval = setInterval(() => {
+		elm = document.createElement("li");
+		elm.textContent = shuffled[i];
+		displayer.appendChild(elm);
+		i++;
+		if (i ==length)
+			clearInterval(interval);
+	}, 30);
+}
 /**************************************************************************** */
