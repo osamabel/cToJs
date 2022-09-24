@@ -41,13 +41,13 @@ function m_gen()
 			range = Array(length);
 			shuffled = Array(length);
 			for (let i = 0; i <= length; i++)
-				range[i] = start++;
+			range[i] = start++;
 			shuffled = shuffle(range);
 			startInput.value = "";
 			endInput.value = "";
 			minIndex = A.list.indexOf(Math.min(...A.list));
 			display();
-			transferMinToButtom();
+			mySortAlgorithm();
 		}
 		else if (start == end)
 		alert("( -_- ), You Are Crazy!!");
@@ -85,7 +85,7 @@ function a_gen()
 		howMany.value = "";
 		minIndex = A.list.indexOf(Math.min(...A.list));
 		display();
-		transferMinToButtom();
+		mySortAlgorithm();
 	}
 	else
 		alert("Sorry, But You Are Not Reasonable At All!");
